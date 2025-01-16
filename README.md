@@ -10,8 +10,8 @@ A simple React application to manage a list of students. This app allows users t
 - Simple and intuitive user interface.
 
 ## Screenshots 
-![Screenshot 1](public/Screenshot1.png)
-![Screenshot 2](public/iScreenshot2.png)
+![Screenshot 1](./admission-form-react-state/public/Screenshot1.png)
+![Screenshot 2](./admission-form-react-state/public/Screenshot2.png)
 
 ## Installation
 
