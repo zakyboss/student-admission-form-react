@@ -1,6 +1,7 @@
 
 export default function Footer(){
-    <div className="footer">
-      <span>Made with Luv 💖 &copy; </span>
+ return(   <div className="footer">
+      <h2>Made with Luv 💖 &copy;Zakyboss </h2>
     </div>
+ )
 }
