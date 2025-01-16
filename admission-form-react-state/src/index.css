@@ -38,7 +38,11 @@ code {
 .form{
   display:flex;
   justify-content:center;
+  padding-bottom:40px;
 }
 .formContainer{
-  background-color:rgb(231,219,231)
+  background-color:rgb(231,219,231) ;
+  margin-top : 30px;
+  margin-left :200px;
+  margin-right :200px;
 }
