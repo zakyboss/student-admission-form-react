@@ -8,6 +8,13 @@ function App() {
  function handleAddStudents(students){
            setStudent((student)=> [...student,students])
  }
+ function handleDeleteStudent(id){
+setStudent((student)=> student.filter(student => student.id!==id))
+ }
+ 
+ function handleToggleStudent(id){
+  setStudent(students=> students.map(student=> student.id===id? {...student,isAdmitted :!student.isAdmitted}:student))
+ }
      
   return (
     <div className="App">
@@ -15,8 +22,10 @@ function App() {
      <Form  onAddStudent={handleAddStudents} 
      />
      <h2 style={{marginLeft:'35%'}}>Student List</h2>
-
-        <StudentList students={students}/>
+    {
+students.length < 1 ? <h3 style={{marginLeft:'25%',padding:'30px', backgroundColor:'gray', marginRight:'300px', display:'flex',justifyContent:'center'}}>Such Empty 😞</h3> : (        <StudentList students={students}  onDeleteStudent={handleDeleteStudent} onToggleStudent={handleToggleStudent}/>
+)
+    }
      <Footer/>
      
     </div>

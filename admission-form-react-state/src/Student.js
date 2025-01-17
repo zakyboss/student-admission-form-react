@@ -1,4 +1,4 @@
-export default function Student({ student, index }) {
+export default function Student({ student, index , onDeleteStudent, onToggleStudent}) {
     const { firstName, lastName, isAdmitted, id } = student;
     return (
       <div className="student">
@@ -6,11 +6,12 @@ export default function Student({ student, index }) {
           style={isAdmitted ? { textDecoration: 'line-through' } : {}}
           className="studentList"
         >
+        <input type='checkbox' value={isAdmitted} onChange={()=>onToggleStudent(student.id)} />
           {typeof id === 'string' ? id.split('-')[0] : Math.trunc(+id, 4)}{' '}
           <em>
             {firstName} {lastName}
           </em>
-          <span>❌</span>
+          <span onClick={()=>onDeleteStudent(id)}  className="deleteBtn">❌</span>
         </li>
       </div>
     );
